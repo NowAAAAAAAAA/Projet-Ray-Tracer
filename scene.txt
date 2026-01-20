@@ -1,0 +1,30 @@
+# SCENE : STYLE SYSTEME SOLAIRE (Composition Finale - Sans le Soleil visible)
+# Format: SPHERE x y z radius r g b specular reflective EMISSIVE
+# EMISSIVE : 1 = C'est une lampe, 0 = C'est un objet normal
+
+# 1. LE SOL (Miroir gris)
+# Sphère géante (r=5000) placée à y=-5001 pour créer un sol plat à y=-1
+SPHERE 0 -5001 0 5000 200 200 200 1000 0.5 0
+
+# 2. JUPITER (La géante au fond à droite)
+SPHERE 1.5 1.5 10 2.5 200 160 130 50 0.1 0
+
+# 3. LA TERRE (A gauche, bleue brillante)
+SPHERE -1.5 0 5 1 0 0 255 500 0.3 0
+
+# 4. MARS (A droite, rouge brique)
+SPHERE 1.8 -0.2 4 0.8 200 60 20 10 0.1 0
+
+# 5. LA LUNE (Devant la Terre, petite)
+SPHERE -0.5 -0.6 3 0.4 220 220 220 20 0 0
+
+# --- ECLAIRAGE ---
+# Format: LIGHT type intensity x y z
+
+LIGHT ambient 0.2
+
+# Lumière principale (On garde l'éclairage même si on ne voit plus la boule jaune)
+LIGHT point 0.6 -5 10 5
+
+# Lumière de débouchage (plus douce, opposée)
+LIGHT point 0.3 5 5 0
