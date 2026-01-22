@@ -1,0 +1,24 @@
+# Format: SPHERE x y z radius r g b specular reflective emissive
+
+# LE TAPIS
+SPHERE 0 -5001 0 5000 10 100 10 -1 0 0
+
+# LES BOULES
+# Rayon passé de 1.0 à 0.7
+# Hauteur (y) passée de 0.0 à -0.3 pour qu'elles touchent le sol
+
+# La Blanche (Devant)
+SPHERE 0 -0.3 3 0.7 255 255 255 500 0.1 0
+
+# La Rouge (Droite)
+# J'ai aussi rapproché un peu les boules en X (1.5 -> 1.2) pour compenser leur petite taille
+SPHERE 1.2 -0.3 4.5 0.7 200 10 10 500 0.1 0
+
+# La Jaune (Gauche)
+SPHERE -1.2 -0.3 4.5 0.7 220 200 10 500 0.1 0
+
+# ECLAIRAGE
+# LIGHT type intensity x y z
+LIGHT ambient 0.2
+LIGHT point 0.8 2 5 2
+LIGHT point 0.3 -2 2 0
